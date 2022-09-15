@@ -1,0 +1,214 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Oswald, sans-serif;
+	font-weight: 400;
+	min-width: 320px;
+}
+header{
+	position: fixed;
+	z-index: 1;
+	padding: 20px;
+}
+h1{
+	font-weight: 400;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 0 10px;
+	color: #ef4135;
+}
+h1 span{
+	color: #0050a4;
+}
+.biografia{
+	text-transform: lowercase;
+	color: #333;
+}
+.biografia::after, /* esto agrega contenido en html con css */
+.seccion nav li:last-child a::after{
+	content: "+";
+}
+nav ul{
+	list-style: none;
+	display: flex;
+}
+nav li{
+	flex-grow: 1;
+}
+nav a{
+	display: block;
+	height: 100vh;
+	background: url("../img/blanco.jpg") no-repeat center;
+	background-size: cover;
+	color: #fff;
+	text-decoration: none;
+	text-transform: lowercase;
+	font-size: 8em;
+	font-weight: 500;
+	position: relative;
+}
+nav span{
+	position: absolute;
+	right: 40px;
+	bottom: 40px;
+}
+nav li:first-child a{
+	background-image: url("../img/azul.jpg");
+	color: #0050a4;
+}
+nav li:last-child a{
+	background-image: url("../img/rojo.jpg");
+	color: #ef4135;
+}
+/*paginas internas*/
+.seccion{
+	color: #333;
+	background-image: linear-gradient(to top, #999, #eee);
+	min-height: 100vh;
+}
+.azul{
+	color: #eee;
+	background-image: linear-gradient(to top, #003670, #0050a4);
+}
+.rojo{
+	color: #eee;
+	background-image: linear-gradient(to top, #bd332a, #ff4145);
+}
+.seccion header{
+	position: static;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+h1 a{
+	color: #ef4135;
+	text-decoration: none;
+}
+.seccion nav{
+	width: 400px;
+}
+.seccion nav li a{
+	display: inline;
+	color: #333;
+	background-image: none;
+	font-size: 1em;
+}
+.azul nav li a,
+.rojo nav li a{
+	color: #eee;
+}
+.contenedor{
+	width: 500px;
+	padding-bottom: 100px;
+	margin: 0 auto;
+}
+.contenedor h2{
+	font-weight: 500;
+	color: #fff;
+	font-size: 12em;
+	position: relative;
+	top: 100px;
+	left: -100px;
+	z-index: -1;
+}
+.azul h2{
+	color: #003670;
+}
+.rojo h2{
+	color: #bd332a;
+}
+.contenedor p{
+	margin-top: 10px
+}
+.contenedor img{
+	display: block;
+	border: 1px solid #333;
+	background-color: #fff;
+	padding: 10px;
+	width: calc(100% - 22px);
+	margin-top: 10px;
+}
+@media screen and (max-width: 1200px){
+	nav a{
+		font-size: 6em;
+}
+@media screen and (max-width: 1024px){
+	nav ul{
+		display: block;
+	}
+	nav a{
+		height: calc(100vh/3);
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	}
+	nav li:first-child a{
+		background-position: center -90px;
+	}
+	nav li:last-child a{
+		background-position: center -140px;
+	}
+	.seccion header{
+		display: block;
+	}
+	.seccion h1{
+		display: inline-block;
+	}
+	.seccion nav{
+		margin-top: 20px;
+	}
+	.seccion nav ul{
+		display: flex;
+	}
+	.seccion nav a{
+		text-shadow: none;
+	}
+}
+@media screen and (max-width: 850px){
+	nav li:last-child a{
+		background-position: center -170px;
+	}
+	nav span{
+		bottom: 20px;
+	}
+	.contenedor h2{
+		left: -50px;
+	}
+	.seccion nav{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 500px){
+	h1{
+		font-size: 1.3em;
+	}
+	.biografia{
+		display: none;
+	}
+	nav a{
+		font-size: 4em;
+	}
+	nav span{
+		right: 20px;
+	}
+	nav li:first-child a3{
+		background-position: center 0px;
+	}
+	nav li:last-child a{
+		background-position: center -30px;
+	}
+	.contenedor{
+		width: 90%;
+	}
+	.contenedor h2{
+		position: static;
+		font-size: 4em;
+	}
+	
+}
+
+
+
+
+
+
+
